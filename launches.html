@@ -15,7 +15,7 @@
 <!--stylesheets-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 <!--imported fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap" rel="stylesheet">
 <!--imported icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!--favicon-->
@@ -28,10 +28,10 @@
             <a href="index.html" class="logo">
                 <img src="gfx/logo/logo_white.svg" width="100%" title="logo" alt="SpaceX">
             </a>
-            <nav role="navigation" class="menu">
+            <nav role="navigation">
                 <input type="checkbox" id="checkbox_toggle">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="launches.html" class="spe">Launch schedule</a></li>
@@ -40,61 +40,40 @@
         </div>
     </header>
     <main>
-        <div class="wrapper featured">
+        <div class="wrapper subtop">
             <article class="contwrap">
                 <section class="col1">
-                    <div class="feacont">
-                        <h2>We do space</h2>
-                        <p>This is a text with moare and more text thjis is buildung up to be someting awesome.</p>
-                        <a href="#"><span class="btn">
-                            <i class="material-icons md-light">subject</i>Read more</span>
-                        </a>
+                    <div class="subtopcont">
+                        <h2>Follow our launches</h2>
+                        <p>HelloThis is a text with moare and more text thjis is buildung up to be someting awesome. And cool</p>
+                        <p class="btn btnLrg">
+                            <span class="vcenter">
+                                <i class="material-icons md-light">visibility</i>View mission details
+                            </span>
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="toggleBox" id="calToggleInfo"></span>
+                            </label>
+                        </p>
+                        <p>
+                            <span class="btn btnHlf btnSel" id="calToggleUpc"><i class="material-icons md-light">view_list</i>Upcoming launches</span>
+                            <span class="btn btnHlf" id="calTogglePrev"><i class="material-icons md-light">view_list</i>Previous launches</span>
+                        </p>
                     </div>
                 </section>
             </article>
         </div>
         <div class="wrapper">
             <article class="contwrap">
-                <section class="col1 center">
-                        <h2>Next launch</h2>
-                        <p id=countdown><span class="lrgnum">00:00:00</span></p>
-                        <p>Descriptions</p>
-                </section>
-                <section class="col1 center">        
-                        <h2>Get a reminder</h2>
-                        <p>Want to see our next launch? <br> Sign up and we'll send you a reminder</p>
-                        <form name="newsletter" novalidate>
-                            <input id="email" type="email" placeholder="Your email" name="mail">
-                            <button type="submit" class="btn">
-                                <i class="material-icons md-light">send</i>Subscribe
-                            </button>
-                        </form>
-                        <div id="msg"></div>
-                </section>
-            </article>
-        </div>
-        <div class="wrapper">
-            <article class="contwrap">
-                <section class="col1 colMedia">
-                    <img src="img/2014/2014_-_5_falcon_9_thaicom_launch-01.jpg" width="100%" height="auto">
-                </section>
-                <section class="col1 colText">
-                    <h2>An extraordinary event</h2>
-                    <p>Astonishment about vastness is bearable only through love of brilliant syntheses across the centuries.</p> <p>Extraordinary claims require extraordinary evidence bits of moving fluff permanence of the stars ship of the imagination Cambrian explosion cosmic fugue.</p>
-                    <a href="#"><span class="btn"><i class="material-icons md-light">subject</i>Read more</span></a>
-                </section>
-            </article>
-        </div>
-        <div class="wrapper">
-            <article class="contwrap">
-                <section class="col1 colText">
-                    <h2>Last launch</h2>
-                    <p>Astonishment about vastness is bearable only through love of brilliant syntheses across the centuries.</p> <p>Extraordinary claims require extraordinary evidence bits of moving fluff permanence of the stars ship of the imagination Cambrian explosion cosmic fugue.</p>
-                    <a href="#"><span class="btn"><i class="material-icons md-light">subject</i>Read more</span></a> 
-                    <a href="#"><span class="btn"><i class="material-icons md-light">play_circle_outline</i>Watch video</span></a>
-                </section>
-                <section class="col1 colMedia">
-                    <img src="img/2014/2014_-_5_falcon_9_thaicom_launch-01.jpg" width="100%" height="auto">
+                <section class="col1">
+                    <div id="root">
+                        <div class="sticky">
+                            <span class="calCol"><h3>Date</h3></span>
+                            <span class="calCol calName"><h3>Mission name</h3></span>
+                            <span class="calCol calRocket"><h3>Rocket</h3></span>
+                            <span class="calCol"><h3>Site</h3></span>
+                        </div>
+                    </div>
                 </section>
             </article>
         </div>
@@ -104,7 +83,7 @@
             <div class="contwrap">
                 <div class="footynav">
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="launches.html"><div class="btn spe">Launch schedule</div></a></li>

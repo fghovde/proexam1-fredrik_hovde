@@ -13,6 +13,7 @@ header {
     left: 0;
     right: 0;
     z-index: 9998;
+    margin-bottom: 2%;
 }
 h1 { 
     display: none;
@@ -47,6 +48,10 @@ article > a {
 article li {
     list-style: circle;
 }
+figure {
+    margin:0;
+    padding-left: 2%;
+}
 .logo {
     flex: 1;
     margin-right: 5%;
@@ -61,6 +66,7 @@ article li {
     flex-direction: column;
     padding: 2% 4%;
     margin: 0 auto;
+    max-width: 1000px;
 }
 .wrapper {
     padding: 1% 0;
@@ -75,6 +81,17 @@ article li {
     .contwrap {
         flex-direction: row;
     }
+    footer .contwrap {
+        flex-direction: column;
+    } 
+}
+@media only screen and (min-width: 1000px) {
+    .wrapper {
+        padding: 1% 5%;
+    }
+    footer .contwrap {
+        flex-direction: row;
+    } 
 }
 @media only screen and (min-width: 1500px) {
     .wrapper {
@@ -88,41 +105,143 @@ article li {
 }
 /* sections and columns */
 .featured {
-    height: 683px;
-    background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad.jpg);
-    background-position: center center;
-    background-size: cover;
+    height: 540px;
+    background-color: #0A0E29;
+    background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad_m.jpg);
+    background-position: bottom center;
+    background-size:cover;
     background-repeat: no-repeat;
     position: relative;
 }
 .feacont {
     position: absolute;
     text-shadow: 3px 3px 5px #000;
-    bottom: 50px;
-    max-width: 310px;
+    bottom: 7%;
+    max-width: 500px;
 }
 .feacont h2 {
     font-size: 3em;
 }
+.subtop {
+    min-height: 450px;
+    background-color: #0A0E29!important;
+    position: relative;
+}
+.subtopcont {
+    max-width: 500px;
+    position: absolute;
+    text-shadow: 3px 3px 5px #000;
+    bottom: 0;
+}
+.subtopcont h2 {
+    font-size: 3em;
+}
 .col1 {
+    flex: 1;
     width: 100%;
 }
+.col3 {
+    flex: 3;
+}
+.col6 {
+    flex: 3;
+}
+.colMedia {
+    padding-top: 2%;
+    order: 1;
+}
+.colText {
+    order: 2;
+    padding-bottom: 2%;
+}
 .lrgnum {
-    font-size: 5em
+    font-size: 5em;
 }
 .center {
     text-align: center;
 }
-
+.vcenter {
+    margin: auto;
+    margin-left: 0;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #0A0E29;
+    z-index: 9997;
+    border-bottom: 1px #aaa dotted;
+    padding: 0 6% 0 4%;
+}
+@media only screen and (min-width: 900px) {
+    .featured {
+        background-position: center center;
+        background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad.jpg);
+    }
+    .colMedia {
+        padding: 2%;
+        order: none;
+    }
+    .colText {
+        order:1;
+        padding: 2%;
+    }
+    .col6 {
+        flex: 6;
+    }
+}
 /* buttons */
+button {
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    text-align: left;
+}
 .btn {
+    display: inline-block;
     border: 2px #fff solid;
-    padding: 2%;
+    padding: 9px 16px 9px 9px;
     text-decoration: none;
+    text-shadow: none;
+    margin: 1% 2% 0 0;
+    width: auto;
+    white-space: nowrap;
+}
+.btn:after {
+    background: #fff;
+    color: #0A0E29;
 }
 .btn:hover {
     background-color: #fff;
     color: #0A0E29;
+    cursor: pointer;
+}
+.btnSel, .btn:active, .btn:focus {
+    background-color: #fff;
+    color: #0A0E29;
+}
+.btnSel {
+    background-color: #fff;
+    color: #0A0E29;
+}
+.btnLrg {
+    width: 89.5%;
+    display: inline-flex;
+}
+.btnLrg:hover {
+    cursor: default;
+}
+.btnHlf {
+    width: 89.5%;;
 }
 .btn < a {
     text-decoration: none;
@@ -132,6 +251,8 @@ article li {
     border: 2px #EEBC2F solid;
     text-align: center;
     min-width: 160px;
+    width: auto;
+    padding-right: 9px;
 }
 .spe a:hover {
     color: #0A0E29;
@@ -141,7 +262,57 @@ article li {
     background-color: #EEBC2F;
     border-color: #EEBC2F;  
 }
-
+@media only screen and (min-width: 525px) {
+    .btnHlf {
+        width: 40.5%;
+    }
+}
+/* Toggle btn */
+.toggle {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    max-width: 30%;
+    height: 36px;
+}
+.toggle input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggleBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #aaa;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.toggleBox:hover {
+    cursor: pointer;
+}
+.toggleBox:before {
+    position: absolute;
+    content: "";
+    height: 78%;
+    width: 48%;
+    left: 5%;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+input:checked + .toggleBox {
+    background-color: #40E2B8;
+}
+input:checked + .toggleBox:before {
+    -webkit-transform: translateX(86%);
+    -ms-transform: translateX(86%);
+    transform: translateX(86%);
+}
 /* nav */
 nav {
     color: #fff;
@@ -149,7 +320,6 @@ nav {
     height: auto;
     position: absolute;
     left: 0;
-    padding-bottom: 15%;
 }
 nav li {
     width: 100%;
@@ -183,7 +353,7 @@ nav input[type=checkbox] {
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
-    padding: 18px;;
+    padding: 19px;
     color: #1a1a1a;
     width: auto;
     background: none;
@@ -191,6 +361,7 @@ nav input[type=checkbox] {
     position: absolute;
     right: 4%;
     background: url(../gfx/icons/menu_icon.svg) no-repeat center;
+    border: 0;
 }
 nav input[type=checkbox]:checked {
     display: inline-block;
@@ -202,7 +373,7 @@ nav input[type=checkbox]:checked ~ ul {
     background: #0A0E29;
     position: absolute;
     padding-bottom: 5%;
-    top: 60px;
+    top: 50px;
 }
 @media only screen and (min-width: 1000px) {
     nav {
@@ -218,6 +389,7 @@ nav input[type=checkbox]:checked ~ ul {
     nav li {
         background: none;
         top: -15px;
+        margin: auto
     }
     nav a:hover {
         border-bottom: 2px #fff solid;
@@ -238,28 +410,48 @@ nav input[type=checkbox]:checked ~ ul {
         display: none;
     }
 }
+/* icons */
+i {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 4%;
+}
 /* forms */
-input {
+form {
+    width: 100%;
+    display: flex;
+}
+input  {
     font-size: 1em;
     color: #fff;
     padding: 2%;
     background: #2B3154;
+    flex: 1;
     border: 0px;
     border: 2px #2B3154 solid;
+    margin: 1% 2% 0 0;
 }
 input:focus {
     border-bottom-color: #fff;
 }
-input:valid {
+/*input:valid {
     border-bottom-color: #40E2B8;
+} */
+input[type=text], input[type=email] {
+    min-width: 50%;
 }
 input[type=submit] {
+    text-align: left;
+    cursor: pointer;
     background: none;
     border: 2px #fff solid;
 }
 form > input[type=submit] {
     color: #40E2B8;
     border: 2px #40E2B8 solid;
+}
+#msg {
+    padding: 2%;
 }
 /* footer */
 footer {
@@ -289,22 +481,26 @@ footer {
 .footysome {
     padding: 4%;
     flex:1;
-    text-align: center;
     margin: auto;
+    min-width: 145px;
 }
 .footysome ul {
     display: flex;
+    padding: 2% 0;
+    margin-top: 10%;
 }
 .footysome li {
+    width: 100%;
     flex:1;
-    padding-left: 4%;
+    padding-left: 10%;
+    max-width: 40px;
 }
 .copyinfo {
     color: #aaa;
     text-align: center;
     font-size: 0.9em;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     .footynav {
         flex: 2;
         padding: 0px;
@@ -321,8 +517,85 @@ footer {
         flex: 1;
     }
     .footysome {
-        padding:0px;
-        padding-left: 5%;
+        padding: 0;
+        padding-left: 2%;
         text-align: left;
+        margin: 0;
+        margin: auto;
+    }
+    .footysome ul {
+        margin-top: 0;
+    }
+    .footysome li {
+        padding-left: 10%;
+        max-width: 26px;
+    }
+}
+/* calendar / shedule / table */
+.calTable {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 4%;
+}
+.calRow {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4% 4%;
+}
+.calRow:nth-child(odd) {
+    background-color: #123B80;
+}
+.calRow p {
+    margin: 0;
+    position: relative;
+}
+.calCol {
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 20%;
+}
+.calName {
+    width: 56%;
+}
+.calRocket {
+    display: none;
+}
+.calHide {
+    display: none;
+}
+.calShow {
+    display: block;
+}
+.calInfo {
+    display: flex;
+    padding: 4% 0 2% 0;
+}
+.patch {
+    width: 100%;
+    margin: auto;
+}
+@media only screen and (min-width: 411px) {
+    .calCol {
+        width: 19%;
+    }
+    .calName {
+        width: 58%;
+    }
+}
+@media only screen and (min-width: 650px) {
+    .calName {
+        width: 38%;
+    }
+    .calRocket {
+        display: inline-flex;
+        width: 20%;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .calCol {
+        padding: 2%;
+    }
+    .calInfo {
+        padding: 2%
     }
 }
