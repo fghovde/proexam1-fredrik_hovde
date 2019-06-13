@@ -103,7 +103,7 @@ figure {
 }
 /* top content */
 .featured {
-    height: 540px;
+    height: 580px;
     background-color: #0A0E29;
     background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad_m.jpg);
     background-position: bottom center;
@@ -121,7 +121,7 @@ figure {
     font-size: 3em;
 }
 .subtop {
-    min-height: 540px;
+    min-height: 580px;
     background-color: #0A0E29!important;
     position: relative;
 }
@@ -139,9 +139,13 @@ figure {
     background-image: url(../img/top_contact_CRS-8.jpg);
     background-position: top left;
 }
+.subabout {
+    background-image: url(../img/44262166295_c2715eb551_k.jpg);
+    background-position: top center;
+}
 @media only screen and (min-width: 900px) {
     .sublaunch {
-        background-position: center center;
+        background-position: bottom center;
     }
 }
 /* sections and columns */
@@ -164,7 +168,17 @@ figure {
     padding-bottom: 2%;
 }
 .lrgnum {
-    font-size: 5em;
+    display: flex;
+    font-size: 3.5em;
+    margin: auto;
+}
+#countDown {
+    display: flex;
+    margin-bottom: 4%;
+    padding: 0;
+}
+.countSpace {
+    margin-bottom: 0.5em;
 }
 .center {
     text-align: center;
@@ -175,7 +189,6 @@ figure {
 }
 .vcenter {
     margin: auto;
-    margin-left: 0;
 }
 .sticky {
     position: -webkit-sticky;
@@ -186,7 +199,15 @@ figure {
     border-bottom: 1px #aaa dotted;
     padding: 0 3% 0 4%;
 }
+@media only screen and (min-width: 350px) {
+    #countDown {
+        padding: 2% 4%;
+    }
+}
 @media only screen and (min-width: 900px) {
+    .lrgnum {
+        font-size: 4.5em;
+    }
     .center:nth-child(odd) {
         border-bottom: none;
     }
@@ -195,7 +216,7 @@ figure {
         background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad.jpg);
     }
     .subtopcont {
-        max-width: 500px;
+        max-width: 460px;
     }
     .colMedia {
         padding: 2%;
@@ -210,14 +231,6 @@ figure {
     }
 }
 /* buttons */
-fieldset {
-    width: auto;
-    margin-right: 2%;
-    border: 0;
-}
-label {
-    display: block;
-}
 button {
     text-transform: uppercase;
     background: none;
@@ -292,10 +305,10 @@ button {
         margin-bottom: 0%;
     }
     .btnLrg {
-        width: 92%;
+        width: 90.5%;
     }
     .btnHlf {
-        width: 41.7%;
+        width: 40.5%;
     }
 }
 /* Toggle btn */
@@ -401,13 +414,13 @@ nav input[type=checkbox]:checked {
     z-index: 9999;
 }
 nav input[type=checkbox]:checked ~ ul {
+    font-weight: bold;
     display: block;
-    width: 100%;
+    width: 96%;
     background: #0A0E29;
     position: absolute;
-    padding-bottom: 2%;
-    top: 50px;
-    box-shadow: 0px 10px 20px 20px #0A0E29;
+    padding: 20% 2% 10% 2%;
+    top: -25px;
 }
 @media only screen and (min-width: 1000px) {
     nav {
@@ -448,7 +461,7 @@ nav input[type=checkbox]:checked ~ ul {
 i {
     display: inline;
     vertical-align: middle;
-    margin-right: 4%;
+    margin-right: 5px;
 }
 /* forms */
 form {
@@ -456,40 +469,97 @@ form {
     display: flex;
     flex-direction: column;
 }
+.fdevider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 .smlform {
     flex-direction: row;
+    font-size: 0.9em;
 }
-input  {
+fieldset {
+    width: auto;
+    padding: 0;
+    margin: 0% 2%;
+    border: 0;
+    flex: 1;
+}
+label {
+    display: none;
+    margin: 0;
+}
+.formField {
+    display: flex;
+    margin-bottom: 2%;
+    flex-direction: column;
+}
+input, textarea  {
+    font-family: inherit;
     font-size: 1em;
     color: #fff;
-    padding: 2%;
+    padding: 10px;
     background: #2B3154;
     flex: 1;
-    border: 0px;
     border: 2px #2B3154 solid;
-    margin: 1% 2% 0 0;
+    margin: 5px 10px 0 0;
+}
+textarea {
+    height: auto;
+    min-height: 76px;
+    margin-bottom: 9px;
 }
 input:focus {
     border-bottom-color: #fff;
 }
 /*input:valid {
     border-bottom-color: #40E2B8;
-} */
+} 
 input[type=text], input[type=email] {
     min-width: 46%;
-}
+}*/
 input[type=submit] {
     text-align: left;
     cursor: pointer;
     background: none;
     border: 2px #fff solid;
 }
-form > input[type=submit] {
+button[type=submit] {
     color: #40E2B8;
     border: 2px #40E2B8 solid;
 }
-#msg {
+button[type=submit]:hover {
+    background-color: #40E2B8;
+}
+.aboveall {
+    z-index: 9999;
+    position: absolute;
+    margin: auto;
+}
+button[type=reset] {
+    color: #aaa;
+    border: 2px #aaa solid;    
+}
+button[type=reset]:hover {
+    background-color: #aaa;
+}
+.error {
+    display: none;
     padding: 2%;
+    color: #F54B4B;
+}
+.success {
+    display: none;
+    font-weight: bold;
+    padding: 2%;
+    color: #0A0E29; 
+    background-color: #40E2B8;
+    margin-top:20px;
+}
+@media only screen and (min-width: 1000px) {
+    .fdevider {
+    flex-direction: row;
+}
 }
 /* footer */
 footer {

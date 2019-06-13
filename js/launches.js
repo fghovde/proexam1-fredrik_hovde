@@ -68,6 +68,7 @@ document.getElementById('calToggleUpc').addEventListener('click', function(data)
     calToggleUpc.classList.add('btnSel');
     calTogglePrev.classList.remove('btnSel');
 });
+
 document.getElementById('calTogglePrev').addEventListener('click', function(data){
     const calTogglePrev = document.getElementById('calTogglePrev');
     const calToggleUpc = document.getElementById('calToggleUpc');

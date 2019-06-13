@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="SpaceX/Fredrik G Hovde">
-    <meta name="description" content="An unofficial guide to space activities around the globe and beound. Catch up with the latest SpaceX news and launches. Take a look at our schedule to watch the next on live!">
+    <meta name="description" content="An unofficial guide to space activities around the globe. Catch up with the latest SpaceX news and launches. Take a look at our schedule to watch the next one live!">
     <meta name="keywords" content="SpaceX, rockets, space, schedule, launch, earth, starlink">
 <!--viewport-->
     <meta content='width=device-width, initial-scale=1' name=viewport>
 <!--browser color-->    
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="theme-color" content="#0A0E29">
 <!--stylesheets-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 <!--imported fonts-->
@@ -45,7 +45,7 @@
                 <section class="col1">
                     <div class="feacont">
                         <h2>We do space</h2>
-                        <p>We develop and launch rockets with cargo into space. Future goal: Send people to mars.</p>
+                        <p>We develop and launch rockets with cargo into space. Our goal: Send people to mars.</p>
                         <a href="about.html">
                             <span class="btn"><i class="material-icons md-light">subject</i>Read more</span>
                         </a>
@@ -56,20 +56,42 @@
         <div class="wrapper">
             <article class="contwrap">
                 <section class="col1 center">
-                        <h2>Next launch</h2>
-                        <p id=countdown><span class="lrgnum">00:00:00</span></p>
-                        <p>Descriptions</p>
+                        <h3>Next launch</h3>
+                        <div id=countDown>
+                            <div>
+                                <span id="countDays" class="lrgnum">00</span>
+                                days
+                            </div>
+                            <span class="lrgnum countSpace">:</span>
+                            <div>
+                                <span id="countHours" class="lrgnum">00</span>
+                                hours
+                            </div>    
+                            <span class="lrgnum countSpace">:</span>
+                            <div>
+                                <span id="countMins" class="lrgnum">00</span>
+                                minutes
+                            </div>
+                            <span class="lrgnum countSpace">:</span>
+                            <div>
+                                <span id="countSecs" class="lrgnum">00</span>
+                                seconds
+                            </div>
+                            <div class="aboveall" id="contEnded"></div>
+                        </div>
                 </section>
                 <section class="col1 colMedia center">        
-                        <h2>Get a reminder</h2>
+                        <h3>Get a reminder</h3>
                         <p>Want to see our next launch? <br> Sign up and we'll send you a reminder</p>
                         <form name="newsletter" class="smlform" novalidate>
-                            <input id="email" type="email" placeholder="Your email" name="mail">
+                            <input id="email" type="email" placeholder="Your email" name="mail" size="16">
                             <button type="submit" class="btn">
-                                <i class="material-icons md-light">send</i>Subscribe
+                                <i class="material-icons md-light">send</i>
+                                Subscribe
                             </button>
                         </form>
-                        <div id="msg"></div>
+                        <span class="error" id="errorMsg"><i class="material-icons md-light">error_outline</i>lNameMsg</span>
+                        <span id="success" id="succMsg"></span>
                 </section>
             </article>
         </div>
@@ -79,7 +101,7 @@
                     <img src="img/2014/2014_-_5_falcon_9_thaicom_launch-01.jpg" width="100%" height="auto">
                 </section>
                 <section class="col1 colText">
-                    <h2>An extraordinary event</h2>
+                    <h3>An extraordinary event</h3>
                     <p>Astonishment about vastness is bearable only through love of brilliant syntheses across the centuries.</p> <p>Extraordinary claims require extraordinary evidence bits of moving fluff permanence of the stars ship of the imagination Cambrian explosion cosmic fugue.</p>
                     <a href="#"><span class="btn"><i class="material-icons md-light">subject</i>Read more</span></a>
                 </section>
@@ -88,7 +110,7 @@
         <div class="wrapper">
             <article class="contwrap">
                 <section class="col1 colText">
-                    <h2>Last launch</h2>
+                    <h3>Last launch</h3>
                     <p>Astonishment about vastness is bearable only through love of brilliant syntheses across the centuries.</p> <p>Extraordinary claims require extraordinary evidence bits of moving fluff permanence of the stars ship of the imagination Cambrian explosion cosmic fugue.</p>
                     <a href="#"><span class="btn"><i class="material-icons md-light">subject</i>Read more</span></a> 
                     <a href="#"><span class="btn"><i class="material-icons md-light">play_circle_outline</i>Watch video</span></a>
@@ -136,5 +158,5 @@
             <div class="col1 copyinfo">Copyright info</div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/countdown.js"></script>
 </body>
