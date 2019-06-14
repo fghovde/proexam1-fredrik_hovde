@@ -1,5 +1,4 @@
 const url = 'https://api.spacexdata.com/v3/launches/';
-const calInfo = document.getElementsByClassName('calInfo');
 const app = document.getElementById('root');
 const calTable = document.createElement('div');
     calTable.setAttribute('class', 'calTable');
@@ -45,6 +44,7 @@ fetch(url)
 }
 
 document.getElementById('calToggleInfo').addEventListener('click', function(){
+    const calInfo = document.getElementsByClassName('calInfo');
     for (var i=0, len=calInfo.length; i<len; i++) {
           if (calInfo[i].style.display === "none") {
             calInfo[i].style.display = "flex";

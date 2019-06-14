@@ -45,11 +45,14 @@
                 <section class="col1">
                     <div class="subtopcont">
                         <h2>Contact us</h2>
-                        <p>HelloThis is a text with moare and more text thjis is buildung up to be someting awesome. And cool</p>
-                        <p>
-                        <a href="tel:+1-111-111-111"><span class="btn" id="calToggleUpc"><i class="material-icons md-light">phone</i>+1-111-111-111</span></a>
-                        <a href="mail:email@email.com"><span class="btn" id="calTogglePrev"><i class="material-icons md-light">mail_outline</i>address@gmail.com</span></a>
-                        </p>
+                        <p>If you have any questions, let us know by sending us a message below. We'll answer you as soon as posible.</p>
+                        <p>On this page you can find:</p>
+                        <ul>
+                            <li>Phone number</li>
+                            <li>Email address</li>
+                            <li>Map and visiting address</li>
+                        </ul>
+                        <br>
                     </div>
                 </section>
             </article>
@@ -58,51 +61,62 @@
             <article class="contwrap">
                 <section class="col1">
                     <h3>Send us a message</h3>
-                    <form action="" method="get" id="message" novalidate>
+                    <form id="contactForm" onsubmit="return(validateForm());" novalidate>
                         <div class="fdevider">
                             <span class="col1">
                                     <fieldset>
                                         <h4>1. Personal information</h4>
                                         <span class="fdevider">
                                             <span class="formField">
-                                                <label for="firstName">First Name</label>
-                                                <input type="text" name="firstName" placeholder="First name" size="24" required="">
+                                                <label for="fName">First Name</label>
+                                                <input type="text" name="fName" id="fName" placeholder="First name" size="24" required="">
                                             </span>
                                             <span class="formField">
-                                                <label for="lastName">Last Name</label>
-                                                <input type="text" name="firstName" placeholder="Last name" size="23" required="">
+                                                <label for="lName">Last Name</label>
+                                                <input type="text" name="lName" id="lName" placeholder="Last name" size="23" required="">
                                             </span>
                                         </span>
-                                        <span class="error" id="fNameMsg"><i class="material-icons md-light">error_outline</i>fNameMsg</span>
-                                        <span class="error" id="lNameMsg"><i class="material-icons md-light">error_outline</i>lNameMsg</span>
+                                        <span class="error" id="fNameMsg" style="display:none;"></span>
+                                        <span class="error" id="lNameMsg" style="display:none;"></span>
                                         <span class="formField">
-                                            <label for="address">E-mail (your@email.com)</label>
-                                            <input type="email" name="address" placeholder="E-mail (your@email.com)" required="">
+                                            <label for="email">E-mail (your@email.com)</label>
+                                            <input type="email" name="email" id="email" placeholder="E-mail (your@email.com)" required="">
                                         </span>
-                                        <span class="error" id="emailMsg"><i class="material-icons md-light">error_outline</i>emailMsg</span>
+                                        <span class="error" id="emailMsg" style="display:none;"></span>
                                         <span class="formField">
                                             <label for="phone">Phone number (+1-111-111-111)</label>
-                                            <input type="tel" name="phone" placeholder="Phone number (+1-111-111-111)" required="">
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone number (+1-111-111-111)" required="">
                                         </span>
-                                        <span class="error" id="phoneMsg"><i class="material-icons md-light">error_outline</i>phoneMsg</span>
+                                        <span class="error" id="phoneMsg" style="display:none;"></span>
                                     </fieldset>
                                 </span>
                                 <span class="col1">
                                     <fieldset>
                                         <span class="formField">
                                             <h4>2. Message</h4>
-                                            <label for="phone">Phone number</label>
-                                            <textarea name="message" placeholder="Your message" required=""></textarea>
+                                            <label for="message">Your message</label>
+                                            <textarea name="message" id="message" placeholder="Your message" required=""></textarea>
                                             <div class="fdevider">
                                                 <button class="btn" type="reset"><i class="material-icons md-light">cancel</i>Cancel</button>
-                                                <button class="btn" type="submit"><i class="material-icons md-light">send</i>Send</button>
+                                                <button class="btn" type="submit" id="submit"><i class="material-icons md-light">send</i>Send</button>
                                             </div>
                                         </span>
                                     </fieldset>
                                  </span>
                             </div>
-                        <div class="success" id="phoneMsg"><i class="material-icons md-light">done</i>Success! Message has been sent.</div>
+                        <div id="succMsg" class="success" style="display:none;"><i class="material-icons md-light">done</i><b>Success!</b> Message has been sent.</div>
                     </form>
+                </section>
+            </article>
+        </div>
+        <div class="wrapper">
+            <article class="contwrap">
+                <section class="col1 center">
+                        <h3>Urgent contact</h3>
+                        <p>Need to come in contact with us faster? <span class="nobreak">Call or email:</span><br><br>
+                        <a href="tel:+1-111-111-111"><span class="btn" id="calToggleUpc"><i class="material-icons md-light">phone</i>+1 310-363-6000</span></a>
+                        <a href="mailto:mail@spacex.com"><span class="btn" id="calTogglePrev"><i class="material-icons md-light">mail_outline</i>mail@spacex.com</span></a>
+                        </p>
                 </section>
             </article>
         </div>
@@ -112,17 +126,6 @@
                     <h3>Visit us</h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.7947762785925!2d-118.33047334874587!3d33.92068108054686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b5dee46db32d%3A0x5589bf4232c10232!2sSpacex!5e0!3m2!1sno!2sno!4v1560367693776!5m2!1sno!2sno" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
                     </iframe>
-                </section>
-            </article>
-        </div>
-        <div class="wrapper">
-            <article class="contwrap">
-                <section class="col1">
-                    <h3>Adress for launch sites </h3>
-                    <h4>Cape Canaveral Air Force Station</h4>
-                    <p></p>
-                    <h4>Kennedy Space Center</h4>
-                    <h4>Vandenberg Air Force Base</h4>
                 </section>
             </article>
         </div>
@@ -161,7 +164,12 @@
             </div>
         </div>
         <div class="contwrap">
-            <div class="col1 copyinfo">Copyright info</div>
+            <div class="col1 copyinfo">
+                <span class="nobreak">Copyright &copy; 2019 |</span> 
+                <span class="nobreak">Design: Fredrik Hovde |</span>
+                <span class="nobreak">Logo and media: SpaceX |</span> 
+                <span class="nobreak">API: spacexdata.com</span>
+            </div>
         </div>
     </footer>
     <script src="js/contact.js"></script>

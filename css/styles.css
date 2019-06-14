@@ -23,6 +23,13 @@ h2, h3, h4, h5 {
     text-transform: capitalize;
     margin-bottom: 10px;
 }
+h3 {
+    font-size: 1.7em;
+    margin-top: 10px;
+}
+h4 {
+    font-size: 1.3em;
+}
 li {
     list-style: none;
     margin: 0;
@@ -46,7 +53,8 @@ article > a {
     text-decoration: underline;
 }
 article li {
-    list-style: circle;
+    list-style: square;
+    margin-left: 2em;
 }
 figure {
     margin:0;
@@ -69,11 +77,25 @@ figure {
     margin: 0 auto;
     max-width: 1000px;
 }
+.innerwrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+}
 .wrapper {
     padding: 1% 0;
 }
 .wrapper:nth-child(odd) {
     background-color: #123B80;
+}
+@media only screen and (min-width: 600px) {
+    .innerwrap {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
 }
 @media only screen and (min-width: 900px) {
     .contwrap {
@@ -84,29 +106,16 @@ figure {
     } 
 }
 @media only screen and (min-width: 1000px) {
-    .wrapper {
-        padding: 1% 5%;
-    }
     footer .contwrap {
         flex-direction: row;
     } 
-}
-@media only screen and (min-width: 1500px) {
-    .wrapper {
-        padding: 1% 15%;
-    }
-}
-@media only screen and (min-width: 1800px) {
-    .wrapper {
-        padding: 1% 25%;
-    }
 }
 /* top content */
 .featured {
     height: 580px;
     background-color: #0A0E29;
     background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad_m.jpg);
-    background-position: bottom center;
+    background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
     position: relative;
@@ -117,41 +126,77 @@ figure {
     bottom: 35px;
     max-width: 320px;
 }
-.feacont h2, .subtopcont h2 {
+.feacont h2, .subtopcont h2, .sublaunchcont h2 {
     font-size: 3em;
 }
 .subtop {
     min-height: 580px;
-    background-color: #0A0E29!important;
+    background-color: #000!important;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.subtopcont {
+.subtopcont, .sublaunchcont {
     position: absolute;
     text-shadow: 1px 2px 9px #000;
     bottom: 20px;
-    background-repeat: no-repeat;
+    padding-right: 2%;
 }
 .sublaunch {
-    background-image: url(../img/top_launch_nusantara-satu-mission.jpg);
-    background-position: top right;
-}
-.subcontact {
-    background-image: url(../img/top_contact_CRS-8.jpg);
+    background-image: url(../img/44262166295_c2715eb551_k.jpg);
     background-position: top left;
 }
+.subcontact {
+    background-image: url(../img/46259778995_fa4f031d69_k.jpg);
+    background-position: top 0 left 30%;
+}
 .subabout {
-    background-image: url(../img/44262166295_c2715eb551_k.jpg);
-    background-position: top center;
+    background-image: url(../img/featured/fea_about.jpg);
+    background-position: top -50px left -250px;
+    background-size: cover;
+}
+@media only screen and (min-width: 500px) {
+    .sublaunchcont {
+        max-width: 460px;
+    }
+    .subtopcont {
+        max-width: 350px;
+    }
+}
+@media only screen and (min-width: 411px) {
+    .subabout {
+        background-position: bottom center;
+        background-size: cover;
+    }
 }
 @media only screen and (min-width: 900px) {
     .sublaunch {
         background-position: bottom center;
     }
+    .subcontact {
+        background-position: top center;
+    }
+    .subabout {
+        background-position: bottom -100px center;
+        background-size: auto;
+    }
 }
+
+@media only screen and (min-width: 1980px) {
+
+    .subabout {
+        background-position: bottom -250px center;
+        background-size: cover;
+    }
+}
+
 /* sections and columns */
 .col1 {
     flex: 1;
     width: 100%;
+}
+.col2 {
+    flex: 2;
 }
 .col3 {
     flex: 3;
@@ -172,6 +217,9 @@ figure {
     font-size: 3.5em;
     margin: auto;
 }
+.nobreak {
+    display: inline-block;
+}
 #countDown {
     display: flex;
     margin-bottom: 4%;
@@ -184,7 +232,7 @@ figure {
     text-align: center;
     padding: 2% 0;
 }
-.center:nth-child(odd) {
+.borderbtm {
     border-bottom: 1px #fff solid;
 }
 .vcenter {
@@ -199,6 +247,9 @@ figure {
     border-bottom: 1px #aaa dotted;
     padding: 0 3% 0 4%;
 }
+.sticky h3 {
+    font-size: 1.2em;
+}
 @media only screen and (min-width: 350px) {
     #countDown {
         padding: 2% 4%;
@@ -208,15 +259,12 @@ figure {
     .lrgnum {
         font-size: 4.5em;
     }
-    .center:nth-child(odd) {
+    .borderbtm {
         border-bottom: none;
     }
     .featured {
         background-position: center center;
         background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad.jpg);
-    }
-    .subtopcont {
-        max-width: 460px;
     }
     .colMedia {
         padding: 2%;
@@ -421,6 +469,7 @@ nav input[type=checkbox]:checked ~ ul {
     position: absolute;
     padding: 20% 2% 10% 2%;
     top: -25px;
+    box-shadow: 0px 10px 300px 200px #0A0E29;
 }
 @media only screen and (min-width: 1000px) {
     nav {
@@ -506,15 +555,19 @@ input, textarea  {
 }
 textarea {
     height: auto;
-    min-height: 76px;
+    min-height: 78px;
     margin-bottom: 9px;
 }
 input:focus {
     border-bottom-color: #fff;
 }
-/*input:valid {
+.fieldValid {
     border-bottom-color: #40E2B8;
-} 
+}
+.fieldInvalid {
+    border-bottom-color: #F54B4B;
+}
+/*
 input[type=text], input[type=email] {
     min-width: 46%;
 }*/
@@ -544,12 +597,10 @@ button[type=reset]:hover {
     background-color: #aaa;
 }
 .error {
-    display: none;
     padding: 2%;
     color: #F54B4B;
 }
 .success {
-    display: none;
     font-weight: bold;
     padding: 2%;
     color: #0A0E29; 
@@ -606,7 +657,9 @@ footer {
 .copyinfo {
     color: #aaa;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    padding: 2% 0;
 }
 @media only screen and (min-width: 1000px) {
     .footynav {
@@ -704,5 +757,16 @@ footer {
 @media only screen and (min-width: 900px) {
     .calInfo {
         padding: 2% 0;
+    }
+}
+/* rockets */
+.rocket {
+    flex:1;
+}
+
+@media only screen and (min-width: 600px) {
+    .rocket {
+        max-width: 300px;
+        padding-left: 3%;
     }
 }

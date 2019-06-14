@@ -55,7 +55,7 @@
         </div>
         <div class="wrapper">
             <article class="contwrap">
-                <section class="col1 center">
+                <section class="col1 center borderbtm">
                         <h3>Next launch</h3>
                         <div id=countDown>
                             <div>
@@ -83,34 +83,35 @@
                 <section class="col1 colMedia center">        
                         <h3>Get a reminder</h3>
                         <p>Want to see our next launch? <br> Sign up and we'll send you a reminder</p>
-                        <form name="newsletter" class="smlform" novalidate>
+                        <form name="newsletter" class="smlform" onsubmit="return(validateEmail());" novalidate>
                             <input id="email" type="email" placeholder="Your email" name="mail" size="16">
                             <button type="submit" class="btn">
                                 <i class="material-icons md-light">send</i>
                                 Subscribe
                             </button>
                         </form>
-                        <span class="error" id="errorMsg"><i class="material-icons md-light">error_outline</i>lNameMsg</span>
-                        <span id="success" id="succMsg"></span>
+                        <span class="error" id="emailMsg" style="display:none">
+                            <i class="material-icons md-light">error_outline</i>
+                            Emailmsg
+                        </span>
+                        <span class="success" id="emailMsg" style="display:none;"></span>
                 </section>
             </article>
         </div>
         <div class="wrapper">
             <article class="contwrap">
-                <section class="col1 colMedia">
-                    <img src="img/2014/2014_-_5_falcon_9_thaicom_launch-01.jpg" width="100%" height="auto">
+                <section class="col1 colMedia" id="lastLaunchMedia">
                 </section>
-                <section class="col1 colText">
-                    <h3>An extraordinary event</h3>
-                    <p>Astonishment about vastness is bearable only through love of brilliant syntheses across the centuries.</p> <p>Extraordinary claims require extraordinary evidence bits of moving fluff permanence of the stars ship of the imagination Cambrian explosion cosmic fugue.</p>
-                    <a href="#"><span class="btn"><i class="material-icons md-light">subject</i>Read more</span></a>
+                <section class="col1 colText vcenter" id="lastLaunchInfo">
+                    <h3>Content loading</h3>
+                    <p>There should be information about our latest launch here. Try refreshing your browser</p> 
                 </section>
             </article>
         </div>
         <div class="wrapper">
             <article class="contwrap">
-                <section class="col1 colText">
-                    <h3>Last launch</h3>
+                <section class="col1 colText vcenter">
+                    <h3>ROCKETS!</h3>
                     <p>Astonishment about vastness is bearable only through love of brilliant syntheses across the centuries.</p> <p>Extraordinary claims require extraordinary evidence bits of moving fluff permanence of the stars ship of the imagination Cambrian explosion cosmic fugue.</p>
                     <a href="#"><span class="btn"><i class="material-icons md-light">subject</i>Read more</span></a> 
                     <a href="#"><span class="btn"><i class="material-icons md-light">play_circle_outline</i>Watch video</span></a>
@@ -155,8 +156,13 @@
             </div>
         </div>
         <div class="contwrap">
-            <div class="col1 copyinfo">Copyright info</div>
+            <div class="col1 copyinfo">
+                <span class="nobreak">Copyright &copy; 2019 |</span> 
+                <span class="nobreak">Design: Fredrik Hovde |</span>
+                <span class="nobreak">Logo and media: SpaceX |</span> 
+                <span class="nobreak">API: spacexdata.com</span>
+            </div>
         </div>
     </footer>
-    <script src="js/countdown.js"></script>
+    <script src="js/homepage.js"></script>
 </body>
