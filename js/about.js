@@ -65,6 +65,8 @@ fetch(url2)
                         '<li>Cost per launch: ' + rocketCost + '</li>';
         p.innerHTML = rocketDescription;
         img.setAttribute('src', 'img/rockets/falcon1.svg');
+        img.setAttribute('title', 'Falcon 1 rocket - Wikimedia (Lucabon, Markus Säynevirta, Craigboy and Rressi) [CC BY-SA 4.0]');
+        img.setAttribute('alt', 'Falcon 1 rocket');
         rocket.setAttribute('class', 'rocket');
         rocket.appendChild(img);
         rocket.appendChild(ul);
@@ -93,6 +95,8 @@ fetch(url3)
                         '<li>Cost per launch: ' + rocketCost + '</li>';
         p.innerHTML = rocketDescription;
         img.setAttribute('src', 'img/rockets/falcon9.svg');
+        img.setAttribute('title', 'Falcon 9 rocket - Wikimedia (Lucabon, Markus Säynevirta, Craigboy and Rressi) [CC BY-SA 4.0]');
+        img.setAttribute('alt', 'Falcon 9 rocket');
         rocket.setAttribute('class', 'rocket');
         rocket.appendChild(img);
         rocket.appendChild(ul);
@@ -121,6 +125,8 @@ fetch(url4)
                         '<li>Cost per launch: ' + rocketCost + '</li>';
         p.innerHTML = rocketDescription;
         img.setAttribute('src', 'img/rockets/falconH.svg');
+        img.setAttribute('title', 'Falcon Heavy rocket - Wikimedia (Lucabon, Markus Säynevirta, Craigboy and Rressi) [CC BY-SA 4.0]');
+        img.setAttribute('alt', 'Falcon Heavy rocket');
         rocket.setAttribute('class', 'rocket');
         rocket.appendChild(img);
         rocket.appendChild(ul);

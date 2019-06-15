@@ -1,11 +1,12 @@
-/* main color #fff + #0A0E29(dark blue) and #123B80(blue) for contrast*/
-/* secondary colors #40E2B8(green) #EEBC2F(yellow) #F54B4B(red)#*/
-/* input fields #2B3154 placeholder text #aaa*/
+/* main color #fff(white) + #0A0E29(dark blue) and #123B80(blue) for contrast*/
+/* secondary colors #40E2B8(light green) #EEBC2F(light orange) #F54B4B(red)#*/
+/* input fields #2B3154 - placeholder text #aaa*/
 body {
     color: #fff;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     background-color: #0A0E29;
+    line-height: 1.3;
 }
 header {
     position: absolute;
@@ -26,6 +27,7 @@ h2, h3, h4, h5 {
 h3 {
     font-size: 1.7em;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 h4 {
     font-size: 1.3em;
@@ -60,6 +62,9 @@ figure {
     margin:0;
     padding-left: 2%;
     flex: 1;
+}
+article img {
+    margin-top: 15px;
 }
 .logo {
     flex: 1;
@@ -114,7 +119,7 @@ figure {
 .featured {
     height: 580px;
     background-color: #0A0E29;
-    background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad_m.jpg);
+    background-image: url(../img/featured/fea_home_m.jpg);
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -143,11 +148,11 @@ figure {
     padding-right: 2%;
 }
 .sublaunch {
-    background-image: url(../img/44262166295_c2715eb551_k.jpg);
+    background-image: url(../img/featured/fea_launch.jpg);
     background-position: top left;
 }
 .subcontact {
-    background-image: url(../img/46259778995_fa4f031d69_k.jpg);
+    background-image: url(../img/featured/fea_contact.jpg);
     background-position: top 0 left 30%;
 }
 .subabout {
@@ -180,16 +185,18 @@ figure {
         background-position: bottom -100px center;
         background-size: auto;
     }
+    .featured {
+        background-position: center center;
+        background-image: url(../img/featured/fea_home.jpg);
+    }
 }
 
 @media only screen and (min-width: 1980px) {
-
     .subabout {
         background-position: bottom -250px center;
         background-size: cover;
     }
 }
-
 /* sections and columns */
 .col1 {
     flex: 1;
@@ -261,10 +268,6 @@ figure {
     }
     .borderbtm {
         border-bottom: none;
-    }
-    .featured {
-        background-position: center center;
-        background-image: url(../img/2013/2013_-_11_vandenberg_sunset_rocket_on_pad.jpg);
     }
     .colMedia {
         padding: 2%;
@@ -518,7 +521,7 @@ form {
     display: flex;
     flex-direction: column;
 }
-.fdevider {
+.fdevider { /* form devider */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -567,10 +570,6 @@ input:focus {
 .fieldInvalid {
     border-bottom-color: #F54B4B;
 }
-/*
-input[type=text], input[type=email] {
-    min-width: 46%;
-}*/
 input[type=submit] {
     text-align: left;
     cursor: pointer;
@@ -609,8 +608,8 @@ button[type=reset]:hover {
 }
 @media only screen and (min-width: 1000px) {
     .fdevider {
-    flex-direction: row;
-}
+        flex-direction: row;
+    }
 }
 /* footer */
 footer {
@@ -763,7 +762,6 @@ footer {
 .rocket {
     flex:1;
 }
-
 @media only screen and (min-width: 600px) {
     .rocket {
         max-width: 300px;

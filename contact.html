@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="SpaceX/Fredrik G Hovde">
-    <meta name="description" content="An unofficial guide to space activities around the globe and beound. Catch up with the latest SpaceX news and launches. Take a look at our schedule to watch the next on live!">
-    <meta name="keywords" content="SpaceX, rockets, space, schedule, launch, earth, starlink">
+    <meta name="description" content="Send us a message, get contact information and visiting address (with map). If you have any questions, let us know in the contact form - and well answer you.">
+    <meta name="keywords" content="SpaceX, rockets, reuse, flight, falcon, dragon, elon, musk, mars, moon, mission, payload, spacecraft, spaceship, ship, spacestation, station, technology, planets, science, test, core, leo, orbit, cargo, satellite, nasa, iss, esa, cnsa, roscosmos, countdown, space, schedule, launch, launches, earth, starlink, radarsat, contact, about, info, information, question, answer, phone, email, address, visit, direct, form, message, map">
 <!--viewport-->
     <meta content='width=device-width, initial-scale=1' name=viewport>
 <!--browser color-->    
@@ -19,7 +19,7 @@
 <!--imported icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="gfx/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="gfx/icons/fav_icon.png"/>
 </head>
 <body>
     <header class ="wrapper" role="banner">
@@ -69,23 +69,23 @@
                                         <span class="fdevider">
                                             <span class="formField">
                                                 <label for="fName">First Name</label>
-                                                <input type="text" name="fName" id="fName" placeholder="First name" size="24" required="">
+                                                <input type="text" name="fName" id="fName" placeholder="First name" aria-label="First name" size="24" required="">
                                             </span>
                                             <span class="formField">
                                                 <label for="lName">Last Name</label>
-                                                <input type="text" name="lName" id="lName" placeholder="Last name" size="23" required="">
+                                                <input type="text" name="lName" id="lName" placeholder="Last name" aria-label="Last name" size="23" required="">
                                             </span>
                                         </span>
                                         <span class="error" id="fNameMsg" style="display:none;"></span>
                                         <span class="error" id="lNameMsg" style="display:none;"></span>
                                         <span class="formField">
                                             <label for="email">E-mail (your@email.com)</label>
-                                            <input type="email" name="email" id="email" placeholder="E-mail (your@email.com)" required="">
+                                            <input type="email" name="email" id="email" placeholder="E-mail (your@email.com)" aria-label="E-mail (your@email.com)" required="">
                                         </span>
                                         <span class="error" id="emailMsg" style="display:none;"></span>
                                         <span class="formField">
                                             <label for="phone">Phone number (+1-111-111-111)</label>
-                                            <input type="tel" name="phone" id="phone" placeholder="Phone number (+1-111-111-111)" required="">
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone number (+1-111-111-111)" aria-label="Phone number" required="">
                                         </span>
                                         <span class="error" id="phoneMsg" style="display:none;"></span>
                                     </fieldset>
@@ -95,7 +95,7 @@
                                         <span class="formField">
                                             <h4>2. Message</h4>
                                             <label for="message">Your message</label>
-                                            <textarea name="message" id="message" placeholder="Your message" required=""></textarea>
+                                            <textarea name="message" id="message" placeholder="Your message" aria-label="Your message" required=""></textarea>
                                             <div class="fdevider">
                                                 <button class="btn" type="reset"><i class="material-icons md-light">cancel</i>Cancel</button>
                                                 <button class="btn" type="submit" id="submit"><i class="material-icons md-light">send</i>Send</button>

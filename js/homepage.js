@@ -50,7 +50,7 @@ fetch(url2)
     const lastLaunchMedia = document.getElementById('lastLaunchMedia');
     lastLaunchInfo.innerHTML = '<h3>Our latest launch</h3>' +
                                 '<p>' + data.details.substring(0,250) + ' ... </p>' +
-                                '<a target="_blank" href="' + data.links.wikipedia + '"><span class="btn"><i class="material-icons md-light">link</i>Read more</span></a>';
+                                '<a target="_blank" href="' + data.links.wikipedia + '" title="Read more (Wikipedia)"><span class="btn"><i class="material-icons md-light">link</i>Read more</span></a>';
     lastLaunchMedia.innerHTML = '<iframe width="100%" height="306" src="https://www.youtube.com/embed/' + data.links.youtube_id 
                                 + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     })

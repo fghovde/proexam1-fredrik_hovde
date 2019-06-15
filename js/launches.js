@@ -29,7 +29,7 @@ fetch(url)
             }
             if (launch.links.mission_patch_small !== null) {
                 fig.setAttribute('class', 'col1');
-                fig.innerHTML = '<img class="patch" src="' + launch.links.mission_patch_small + '">';
+                fig.innerHTML = '<img class="patch" src="' + launch.links.mission_patch_small + '" title="Mission patch">';
                 div.appendChild(fig);
             }
             if (launch.upcoming === true) {
