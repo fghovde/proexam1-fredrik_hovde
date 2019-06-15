@@ -271,7 +271,6 @@ article img {
     }
     .colMedia {
         padding: 2%;
-        order: none;
     }
     .colText {
         order:1;
@@ -323,7 +322,7 @@ button {
 .btnHlf {
     width: 86.5%;
 }
-.btn < a {
+.btn a {
     text-decoration: none;
 }
 .spe {
@@ -353,7 +352,7 @@ button {
 }
 @media only screen and (min-width: 525px) {
     .btn:nth-child(1) {
-        margin-bottom: 0%;
+        margin-bottom: 0;
     }
     .btnLrg {
         width: 90.5%;
@@ -472,7 +471,7 @@ nav input[type=checkbox]:checked ~ ul {
     position: absolute;
     padding: 20% 2% 10% 2%;
     top: -25px;
-    box-shadow: 0px 10px 300px 200px #0A0E29;
+    box-shadow: 0 10px 300px 200px #0A0E29;
 }
 @media only screen and (min-width: 1000px) {
     nav {
@@ -533,7 +532,7 @@ form {
 fieldset {
     width: auto;
     padding: 0;
-    margin: 0% 2%;
+    margin: 0 2%;
     border: 0;
     flex: 1;
 }
@@ -663,10 +662,10 @@ footer {
 @media only screen and (min-width: 1000px) {
     .footynav {
         flex: 2;
-        padding: 0px;
+        padding: 0;
         padding-right: 5%;
         border-right: 1px #fff solid;
-        border-bottom: 0px;
+        border-bottom: 0;
         text-align: left;
     }
     .footynav ul {
